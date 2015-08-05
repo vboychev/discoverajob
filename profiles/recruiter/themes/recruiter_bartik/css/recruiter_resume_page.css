@@ -1,0 +1,29 @@
+.profile2-resume .field-collection-container .info {
+  font-style: italic;
+}
+
+/* Field collections with time periods instead of labels. */
+
+/* Make time periods appear like labels. */
+.profile2-resume .resume-time-period {
+  /* Fake field label style. */
+  font-size: inherit;
+  color: #3B3B3B;
+  padding-right: 0px;
+  width: 25%;
+  float: left;
+}
+.profile2-resume .resume-info {
+  margin-left: 25%;
+}
+
+.profile2-resume .field-name-field-resume-education-instituti,
+.profile2-resume .field-name-field-resume-job-title {
+  font-weight: bold;
+}
+
+/* Make paragraphs more compact. */
+.profile2-resume .field-type-taxonomy-term-reference,
+.profile2-resume p {
+  margin: 0;
+}
