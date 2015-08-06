@@ -8,7 +8,7 @@
 /**
  * The current system version.
  */
-define('VERSION', '7.35');
+define('VERSION', '7.38');
 
 /**
  * Core API compatibility.
@@ -529,9 +529,8 @@ function timer_stop($name) {
  * Returns the appropriate configuration directory.
  *
  * Returns the configuration path based on the site's hostname, port, and
- * pathname. Uses find_conf_path() to find the current configuration directory.
- * See default.settings.php for examples on how the URL is converted to a
- * directory.
+ * pathname. See default.settings.php for examples on how the URL is converted
+ * to a directory.
  *
  * @param bool $require_settings
  *   Only configuration directories with an existing settings.php file
@@ -1644,14 +1643,14 @@ function request_uri() {
  *   information about the passed-in exception is used.
  * @param $variables
  *   Array of variables to replace in the message on display. Defaults to the
- *   return value of drupal_decode_exception().
+ *   return value of _drupal_decode_exception().
  * @param $severity
  *   The severity of the message, as per RFC 3164.
  * @param $link
  *   A link to associate with the message.
  *
  * @see watchdog()
- * @see drupal_decode_exception()
+ * @see _drupal_decode_exception()
  */
 function watchdog_exception($type, Exception $exception, $message = NULL, $variables = array(), $severity = WATCHDOG_ERROR, $link = NULL) {
 
@@ -2638,7 +2637,7 @@ function drupal_installation_attempted() {
  *
  * This would include implementations of hook_install(), which could run
  * during the Drupal installation phase, and might also be run during
- * non-installation time, such as while installing the module from the the
+ * non-installation time, such as while installing the module from the
  * module administration page.
  *
  * Example usage:
@@ -3167,10 +3166,13 @@ function _registry_check_code($type, $name = NULL) {
   // This function may get called when the default database is not active, but
   // there is no reason we'd ever want to not use the default database for
   // this query.
-  $file = Database::getConnection('default', 'default')->query("SELECT filename FROM {registry} WHERE name = :name AND type = :type", array(
-      ':name' => $name,
-      ':type' => $type,
-    ))
+  $file = Database::getConnection('default', 'default')
+    ->select('registry', 'r', array('target' => 'default'))
+    ->fields('r', array('filename'))
+    // Use LIKE here to make the query case-insensitive.
+    ->condition('r.name', db_like($name), 'LIKE')
+    ->condition('r.type', $type)
+    ->execute()
     ->fetchField();
 
   // Flag that we've run a lookup query and need to update the cache.
@@ -3507,4 +3509,35 @@ function drupal_check_memory_limit($required, $memory_limit = NULL) {
   // - The memory limit is set to unlimited (-1).
   // - The memory limit is greater than the memory required for the operation.
   return ((!$memory_limit) || ($memory_limit == -1) || (parse_size($memory_limit) >= parse_size($required)));
+}
+
+/**
+ * Invalidates a PHP file from any active opcode caches.
+ *
+ * If the opcode cache does not support the invalidation of individual files,
+ * the entire cache will be flushed.
+ *
+ * @param string $filepath
+ *   The absolute path of the PHP file to invalidate.
+ */
+function drupal_clear_opcode_cache($filepath) {
+  if (!defined('PHP_VERSION_ID') || PHP_VERSION_ID < 50300) {
+    // Below PHP 5.3, clearstatcache does not accept any function parameters.
+    clearstatcache();
+  }
+  else {
+    clearstatcache(TRUE, $filepath);
+  }
+
+  // Zend OPcache.
+  if (function_exists('opcache_invalidate')) {
+    opcache_invalidate($filepath, TRUE);
+  }
+  // APC.
+  if (function_exists('apc_delete_file')) {
+    // apc_delete_file() throws a PHP warning in case the specified file was
+    // not compiled yet.
+    // @see http://php.net/apc-delete-file
+    @apc_delete_file($filepath);
+  }
 }
