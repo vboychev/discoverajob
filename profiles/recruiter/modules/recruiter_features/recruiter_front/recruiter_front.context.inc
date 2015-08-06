@@ -26,12 +26,6 @@ function recruiter_front_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'recruiter_job_search-job_total_count' => array(
-          'module' => 'recruiter_job_search',
-          'delta' => 'job_total_count',
-          'region' => 'search',
-          'weight' => '-24',
-        ),
         'views--exp-job_search-search_page' => array(
           'module' => 'views',
           'delta' => '-exp-job_search-search_page',
