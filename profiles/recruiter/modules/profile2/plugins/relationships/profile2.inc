@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Plugin to provide an relationship handler for all terms from node.
+ * Plugin to provide an relationship handler for profile2 from user.
  */
 
 /**
@@ -13,7 +13,7 @@ $plugin = array(
   'title' => t('Profile2 from user'),
   'keyword' => 'profile2',
   'description' => t('Adds a profile2 type from a user context.'),
-  'required context' => new ctools_context_required(t('User'), 'user'),
+  'required context' => new ctools_context_required(t('User'), 'entity:user'),
   'context' => 'profile2_from_user_context',
   'edit form' => 'profile2_from_user_settings_form',
   'defaults' => array('type' => 'main'),
@@ -28,11 +28,13 @@ function profile2_from_user_context($context, $conf) {
     return ctools_context_create_empty('entity:profile2', NULL);
   }
 
-  $account = clone $context->data;
-
-  if ($profile = profile2_load_by_user($account, $conf['type'])) {
+  // Load user's profile and return a ctools context from it.
+  if ($profile = profile2_load_by_user($context->data, $conf['type'])) {
     return ctools_context_create('entity:profile2', $profile);
   }
+
+  // In case when we can't load a profile, just return an empty context.
+  return ctools_context_create_empty('entity:profile2', NULL);
 }
 
 /**
