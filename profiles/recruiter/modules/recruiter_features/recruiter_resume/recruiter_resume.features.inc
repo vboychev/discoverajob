@@ -7,8 +7,7 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function recruiter_resume_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function recruiter_resume_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
@@ -17,8 +16,8 @@ function recruiter_resume_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function recruiter_resume_views_api() {
-  return array("version" => "3.0");
+function recruiter_resume_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -30,7 +29,7 @@ function recruiter_resume_flag_default_flags() {
   $flags['resume_bookmarks'] = array(
     'entity_type' => 'profile2',
     'title' => 'Bookmark resume',
-    'global' => '0',
+    'global' => 0,
     'types' => array(
       0 => 'resume',
     ),

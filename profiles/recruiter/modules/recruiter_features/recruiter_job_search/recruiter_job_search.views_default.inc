@@ -136,6 +136,13 @@ function recruiter_job_search_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = '<h1 class="search-result-header">@total Jobs found</h1>';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'agent box';
+  $handler->display->display_options['header']['area']['content'] = '<div class="agent-box"><span class="agent-info">Get notified for similar jobs?</span> <span class="agent-link"><a href="#save-search">Subscribe using the Job Agent!</a></span></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -227,6 +234,8 @@ function recruiter_job_search_views_default_views() {
     t('next ›'),
     t('last »'),
     t('<h1 class="search-result-header">@total Jobs found</h1>'),
+    t('agent box'),
+    t('<div class="agent-box"><span class="agent-info">Get notified for similar jobs?</span> <span class="agent-link"><a href="#save-search">Subscribe using the Job Agent!</a></span></div>'),
     t('Empty text.'),
     t('No jobs found.'),
     t('What?'),

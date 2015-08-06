@@ -13,21 +13,21 @@ function recruiter_common_user_default_roles() {
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => '2',
+    'weight' => 2,
     'machine_name' => 'administrator',
   );
 
   // Exported role: content admin.
   $roles['content admin'] = array(
     'name' => 'content admin',
-    'weight' => '6',
+    'weight' => 6,
     'machine_name' => 'content_admin',
   );
 
   // Exported role: recruiter.
   $roles['recruiter'] = array(
     'name' => 'recruiter',
-    'weight' => '3',
+    'weight' => 3,
     'machine_name' => 'recruiter',
   );
 

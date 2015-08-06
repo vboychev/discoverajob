@@ -404,6 +404,9 @@ function recruiter_job_views_default_views() {
     t('Displaying @start - @end of @total'),
     t('user'),
     t('Content'),
+    t('- Choose an operation -'),
+    t('Publish jobs'),
+    t('Unpublish jobs'),
     t('Job type'),
     t('Job title'),
     t('Created'),
@@ -768,7 +771,6 @@ function recruiter_job_views_default_views() {
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
-  $handler->display->display_options['fields']['changed']['date_format'] = 'short';
   $handler->display->display_options['fields']['changed']['label'] = 'Last updated';
   $handler->display->display_options['fields']['changed']['date_format'] = 'time ago';
   /* Field: Content: Job URL */

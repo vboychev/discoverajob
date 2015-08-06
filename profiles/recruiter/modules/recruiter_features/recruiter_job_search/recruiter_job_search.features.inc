@@ -7,20 +7,16 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function recruiter_job_search_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function recruiter_job_search_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
-  list($module, $api) = func_get_args();
   if ($module == "facetapi" && $api == "facetapi") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -29,8 +25,8 @@ function recruiter_job_search_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function recruiter_job_search_views_api() {
-  return array("version" => "3.0");
+function recruiter_job_search_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -42,7 +38,7 @@ function recruiter_job_search_flag_default_flags() {
   $flags['job_bookmarks'] = array(
     'entity_type' => 'node',
     'title' => 'Job bookmarks',
-    'global' => '0',
+    'global' => 0,
     'types' => array(
       0 => 'job_per_file',
       1 => 'job_per_link',

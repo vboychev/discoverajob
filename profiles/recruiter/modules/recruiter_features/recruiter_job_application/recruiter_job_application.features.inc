@@ -7,16 +7,13 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function recruiter_job_application_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function recruiter_job_application_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
-  list($module, $api) = func_get_args();
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -25,8 +22,8 @@ function recruiter_job_application_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function recruiter_job_application_views_api() {
-  return array("version" => "3.0");
+function recruiter_job_application_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -47,13 +44,6 @@ function recruiter_job_application_default_message_type() {
     "language" : "en",
     "arguments" : null,
     "message_text" : {
-      "de" : [
-        {
-          "value" : "\\u003Ca href=\\u0022[message:user:profile-resume:url]\\u0022\\u003E[message:user:profile-resume:field-resume-personal-info:field_resume_firstname] [message:user:profile-resume:field-resume-personal-info:field_resume_lastname]\\u003C\\/a\\u003E hat eine neue \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003EBewerbung\\u003C\\/a\\u003E f\\u00fcr Ihren Job \\u003Ca href=\\u0022[message:field-job-application:field-job-application-job-ref:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E gesendet.",
-          "format" : "full_html",
-          "safe_value" : "\\u003Cp\\u003E\\u003Ca href=\\u0022[message:user:profile-resume:url]\\u0022\\u003E[message:user:profile-resume:field-resume-personal-info:field_resume_firstname] [message:user:profile-resume:field-resume-personal-info:field_resume_lastname]\\u003C\\/a\\u003E hat eine neue \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003EBewerbung\\u003C\\/a\\u003E f\\u00fcr Ihren Job \\u003Ca href=\\u0022[message:field-job-application:field-job-application-job-ref:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E gesendet.\\u003C\\/p\\u003E\\n"
-        }
-      ],
       "en" : [
         {
           "value" : "\\u003Ca href=\\u0022[message:user:profile-resume:url]\\u0022\\u003E[message:user:profile-resume:field-resume-personal-info:field_resume_firstname] [message:user:profile-resume:field-resume-personal-info:field_resume_lastname]\\u003C\\/a\\u003E has sent you a new \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003Eapplication\\u003C\\/a\\u003E for your job \\u003Ca href=\\u0022[message:field-job-application:field-job-application-job-ref:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E.",
@@ -84,13 +74,6 @@ function recruiter_job_application_default_message_type() {
     "language" : "en",
     "arguments" : null,
     "message_text" : {
-      "de" : [
-        {
-          "value" : "Deine Bewerbung f\\u00fcr \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E wurde abgelehnt (Begr\\u00fcndung: @reason).",
-          "format" : "full_html",
-          "safe_value" : "\\u003Cp\\u003EDeine Bewerbung f\\u00fcr \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E wurde abgelehnt (Begr\\u00fcndung: @reason).\\u003C\\/p\\u003E\\n"
-        }
-      ],
       "en" : [
         {
           "value" : "Your application for \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E has been rejected (Reason: @reason).",
@@ -121,13 +104,6 @@ function recruiter_job_application_default_message_type() {
     "language" : "en",
     "arguments" : null,
     "message_text" : {
-      "de" : [
-        {
-          "value" : "Deine Bewerbung f\\u00fcr \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E wurde vorgemerkt.",
-          "format" : "full_html",
-          "safe_value" : "\\u003Cp\\u003EDeine Bewerbung f\\u00fcr \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E wurde vorgemerkt.\\u003C\\/p\\u003E\\n"
-        }
-      ],
       "en" : [
         {
           "value" : "Your application for \\u003Ca href=\\u0022[message:field-job-application:url]\\u0022\\u003E[message:field-job-application:field-job-application-job-ref:title]\\u003C\\/a\\u003E has been shortlisted.",
@@ -162,6 +138,7 @@ function recruiter_job_application_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
 

@@ -13,7 +13,7 @@ function recruiter_resume_user_default_roles() {
   // Exported role: applicant.
   $roles['applicant'] = array(
     'name' => 'applicant',
-    'weight' => '4',
+    'weight' => 4,
     'machine_name' => 'applicant',
   );
 

@@ -13,9 +13,9 @@ function recruiter_job_application_taxonomy_default_vocabularies() {
       'name' => 'Job application rejection reason',
       'machine_name' => 'job_application_rejection_reason',
       'description' => 'Possible reasons for rejection',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

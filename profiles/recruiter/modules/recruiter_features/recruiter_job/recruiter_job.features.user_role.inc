@@ -13,7 +13,7 @@ function recruiter_job_user_default_roles() {
   // Exported role: job admin.
   $roles['job admin'] = array(
     'name' => 'job admin',
-    'weight' => '5',
+    'weight' => 5,
     'machine_name' => 'job_admin',
   );
 

@@ -10,32 +10,32 @@
 function recruiter_common_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access dashboard.
+  // Exported permission: 'access dashboard'.
   $permissions['access dashboard'] = array(
     'name' => 'access dashboard',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'content admin',
+      'administrator' => 'administrator',
+      'content admin' => 'content admin',
     ),
     'module' => 'dashboard',
   );
 
-  // Exported permission: show format selection for node.
+  // Exported permission: 'show format selection for node'.
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'content admin',
+      'administrator' => 'administrator',
+      'content admin' => 'content admin',
     ),
     'module' => 'better_formats',
   );
 
-  // Exported permission: use text format full_wysiwyg_html.
+  // Exported permission: 'use text format full_wysiwyg_html'.
   $permissions['use text format full_wysiwyg_html'] = array(
     'name' => 'use text format full_wysiwyg_html',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'content admin',
+      'administrator' => 'administrator',
+      'content admin' => 'content admin',
     ),
     'module' => 'filter',
   );

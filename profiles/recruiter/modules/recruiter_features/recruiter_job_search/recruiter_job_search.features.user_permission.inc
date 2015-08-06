@@ -10,24 +10,24 @@
 function recruiter_job_search_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: flag job_bookmarks.
+  // Exported permission: 'flag job_bookmarks'.
   $permissions['flag job_bookmarks'] = array(
     'name' => 'flag job_bookmarks',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'applicant',
-      2 => 'content admin',
+      'administrator' => 'administrator',
+      'applicant' => 'applicant',
+      'content admin' => 'content admin',
     ),
     'module' => 'flag',
   );
 
-  // Exported permission: unflag job_bookmarks.
+  // Exported permission: 'unflag job_bookmarks'.
   $permissions['unflag job_bookmarks'] = array(
     'name' => 'unflag job_bookmarks',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'applicant',
-      2 => 'content admin',
+      'administrator' => 'administrator',
+      'applicant' => 'applicant',
+      'content admin' => 'content admin',
     ),
     'module' => 'flag',
   );
