@@ -9,4 +9,5 @@ dependencies[] = googleanalytics
 dependencies[] = metatag
 dependencies[] = module_filter
 dependencies[] = video_embed_field
+dependencies[] = job_feature_recruiter_company
 features[features_api][] = api:1

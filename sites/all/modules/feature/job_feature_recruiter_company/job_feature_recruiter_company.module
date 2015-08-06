@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Recruiter company feature.
+ */
+
+include_once 'job_feature_recruiter_company.features.inc';

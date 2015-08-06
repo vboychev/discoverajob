@@ -3,6 +3,8 @@ description = Allow applicants to create a resume.
 core = 7.x
 package = Recruiter
 php = 5.2.0
+version = 7.x-1.3
+project = recruiter_resume
 dependencies[] = addressfield
 dependencies[] = autocomplete_deluxe
 dependencies[] = content_taxonomy
@@ -26,6 +28,7 @@ dependencies[] = rules_link
 dependencies[] = taxonomy_formatter
 dependencies[] = term_level
 dependencies[] = views
+datestamp = 1413453270
 features[context][] = resume_view
 features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
@@ -105,10 +108,3 @@ features[user_role][] = applicant
 features[views_view][] = resume_administration
 features[views_view][] = resume_bookmarks
 features[views_view][] = resume_dashboard_block
-
-; Information added by Drupal.org packaging script on 2014-10-16
-version = "7.x-1.3"
-core = "7.x"
-project = "recruiter_features"
-datestamp = "1413453270"
-

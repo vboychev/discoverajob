@@ -75,7 +75,11 @@ function recruiter_resume_default_profile2_type() {
     "type" : "resume",
     "label" : "Resume",
     "weight" : "0",
-    "data" : { "use_page" : 1, "page_path" : "resume" },
+    "data" : {
+      "registration" : 0,
+      "roles" : { "30037204" : "30037204", "115362423" : "115362423" },
+      "use_page" : 1
+    },
     "rdf_mapping" : []
   }');
   return $items;
