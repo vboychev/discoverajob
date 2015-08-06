@@ -1,0 +1,10 @@
+name = Dependency
+core = 7.x
+package = Discoverajob
+version = 7.x-1.0
+project = job_feature_dependency
+dependencies[] = diff
+dependencies[] = googleanalytics
+dependencies[] = metatag
+dependencies[] = module_filter
+features[features_api][] = api:1
