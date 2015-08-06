@@ -2,7 +2,8 @@ name = Recruiter admin
 description = Permissions for the content admin role
 core = 7.x
 package = Recruiter
-php = 5.2.4
+version = 7.x-1.3
+project = recruiter_features
 dependencies[] = admin_menu
 dependencies[] = block
 dependencies[] = contextual
@@ -22,10 +23,12 @@ dependencies[] = shortcut
 dependencies[] = strongarm
 dependencies[] = system
 dependencies[] = taxonomy
+dependencies[] = user
 dependencies[] = views
+datestamp = 1413453270
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
-features[features_api][] = api:1
+features[features_api][] = api:2
 features[user_permission][] = access administration menu
 features[user_permission][] = access administration pages
 features[user_permission][] = access content overview
@@ -56,10 +59,3 @@ features[variable][] = roleassign_roles
 features[views_view][] = applicants_dashboard_block
 features[views_view][] = recruiter_dashboard_block
 features[views_view][] = user_administration
-
-; Information added by Drupal.org packaging script on 2014-10-16
-version = "7.x-1.3"
-core = "7.x"
-project = "recruiter_features"
-datestamp = "1413453270"
-
