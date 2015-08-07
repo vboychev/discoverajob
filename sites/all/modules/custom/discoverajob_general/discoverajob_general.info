@@ -1,0 +1,4 @@
+name = Discoverajob General
+description = "Provides general functionality"
+package = Discoverajob
+core = 7.x

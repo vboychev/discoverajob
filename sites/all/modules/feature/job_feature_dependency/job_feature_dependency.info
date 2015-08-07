@@ -1,13 +1,14 @@
 name = Dependency
 core = 7.x
 package = Discoverajob
-php = 5.2.4
 version = 7.x-1.0
 project = job_feature_dependency
+dependencies[] = devel
 dependencies[] = diff
+dependencies[] = discoverajob_general
 dependencies[] = googleanalytics
+dependencies[] = job_feature_recruiter_company
 dependencies[] = metatag
 dependencies[] = module_filter
 dependencies[] = video_embed_field
-dependencies[] = job_feature_recruiter_company
-features[features_api][] = api:1
+features[features_api][] = api:2

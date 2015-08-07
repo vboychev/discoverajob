@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * General functionality
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function discoverajob_general_form_alter(&$form, &$form_state, $form_id) {
+  // Added validate on user pass page and change label on field.
+  if ($form_id == 'user_pass') {
+    $form['name']['#title'] = t('E-mail address');
+    array_unshift($form['#validate'], 'discoverajob_general_user_pass_validation');
+  }
+}
+
+/**
+ * Validate user pass form.
+ */
+function discoverajob_general_user_pass_validation($form, &$form_state) {
+  $email = trim($form_state['values']['name']);
+  // Try to load user by email.
+  $users = user_load_multiple(array(), array('mail' => $email, 'status' => '1'));
+  $account = reset($users);
+  if (!isset($account->uid)) {
+    form_set_error('name', t('Sorry, %email is not recognized an e-mail address.', array('%email' => $email)));
+  }
+}
