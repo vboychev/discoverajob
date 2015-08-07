@@ -86,9 +86,10 @@ function recruiter_job_search_facetapi_default_facet_settings() {
     'facet_missing' => '0',
     'flatten' => 0,
     'query_type' => 'term',
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
     'pretty_paths_alias' => 'location',
+    'exclude' => 0,
   );
   $export['search_api@job_search::field_job_location'] = $facet;
 
@@ -112,11 +113,12 @@ function recruiter_job_search_facetapi_default_facet_settings() {
     'facet_missing' => '0',
     'flatten' => '0',
     'query_type' => 'term',
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
     'pretty_paths_alias' => 'occupational-field',
-    'pretty_paths_taxonomy_pathauto' => TRUE,
+    'pretty_paths_taxonomy_pathauto' => 1,
     'pretty_paths_taxonomy_pathauto_vocabulary' => 'occupational_fields',
+    'exclude' => 0,
   );
   $export['search_api@job_search::field_job_occupational_field:parents_all'] = $facet;
 
@@ -378,7 +380,7 @@ function recruiter_job_search_facetapi_default_facet_settings() {
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',
-    'soft_limit' => '5',
+    'soft_limit' => '10',
     'nofollow' => 0,
     'show_expanded' => 0,
     'empty_text' => array(
@@ -421,7 +423,7 @@ function recruiter_job_search_facetapi_default_facet_settings() {
       'indexed' => '4',
     ),
     'empty_behavior' => 'none',
-    'soft_limit' => '5',
+    'soft_limit' => '10',
     'nofollow' => 0,
     'show_expanded' => 0,
     'empty_text' => array(
