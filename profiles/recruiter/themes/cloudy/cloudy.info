@@ -14,6 +14,7 @@ features[] = slogan
 
 stylesheets[all][] = css/cloudy.css
 stylesheets[all][] = css/tipTip.css
+stylesheets[all][] = css/override.css
 scripts[] = js/cloudy.js
 scripts[] = js/superfish.js
 scripts[] = js/jquery.tipTip.minified.js

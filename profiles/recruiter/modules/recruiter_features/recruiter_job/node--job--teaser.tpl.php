@@ -1,8 +1,7 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="date">
-    <?php
-    print format_date($node->changed, 'date_only'); ?>
+    <span><?php print format_date($node->changed, 'date_only'); ?></span>
   </div>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
@@ -23,6 +22,10 @@
       <?php print render($teaser_terms); ?>
     </div>
 
+  </div>
+
+  <div class="company-logo">
+    <?php print render($company_logo); ?>
   </div>
 
   <div class="link-wrapper">

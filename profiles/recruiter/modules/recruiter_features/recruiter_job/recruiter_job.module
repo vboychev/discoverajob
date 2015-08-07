@@ -45,6 +45,17 @@ function recruiter_job_preprocess_node(&$node) {
       if (empty($node['teaser_location'])) {
         $node['teaser_location'] = recruiter_job_teaser_terms($node['node'], array('field_job_region'), 8);
       }
+      $company_profile = profile2_load_by_user($node['uid'], 'company');
+      $node['company_logo'] = '';
+      if (!empty($company_profile->field_company_logo[LANGUAGE_NONE][0]['uri'])) {
+        $image = array(
+          'style_name' => 'company_logo_on_listings',
+          'path' => $company_profile->field_company_logo[LANGUAGE_NONE][0]['uri'],
+          'height' => $company_profile->field_company_logo[LANGUAGE_NONE][0]['height'],
+          'width' => $company_profile->field_company_logo[LANGUAGE_NONE][0]['width'],
+        );
+        $node['company_logo'] = theme('image_style', $image);
+      }
       $node['teaser_terms'] = isset($node['teaser_terms']) ? $node['teaser_terms'] : recruiter_job_teaser_terms($node['node']);
       $node['theme_hook_suggestions'][] = 'node__job__teaser';
 

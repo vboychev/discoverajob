@@ -1,0 +1,72 @@
+.node-job.node-teaser .link-wrapper {
+  width: 66.16667%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5%;
+  display: inline;
+  margin-bottom: 10px;
+}
+.node-job.node-teaser .link-wrapper {
+  clear: both;
+}
+.node-job.node-teaser .link-wrapper ul {
+  margin: 0;
+  float: left;
+}
+.node-job.node-teaser .link-wrapper ul > li {
+  float: left;
+}
+ul li.flag-job_bookmarks,
+ul li.flag-resume_bookmarks {
+  list-style: outside none disc;
+  margin-left: 1.5em;
+  padding: inherit;
+}
+.flag-resume-bookmarks .flag.flag-action, .flag-job-bookmarks .flag.flag-action {
+  background-position: none;
+}
+.cloudy-sprite, .flag-resume-bookmarks .flag.flag-action, .flag-job-bookmarks .flag.flag-action, .flag-resume-bookmarks .flag.unflag-action, .flag-job-bookmarks .flag.unflag-action, .flag-resume-bookmarks .flag:hover, .flag-resume-bookmarks .flag:focus, .flag-resume-bookmarks .flag:active, .flag-job-bookmarks .flag:hover, .flag-job-bookmarks .flag:focus, .flag-job-bookmarks .flag:active {
+  background: none;
+}
+.flag-resume-bookmarks .flag, .flag-job-bookmarks .flag {
+  height: auto;
+}
+.flag-resume-bookmarks .flag, .flag-job-bookmarks .flag {
+  line-height: normal;
+  padding-left: 0;
+}
+.node-job.node-teaser .node-readmore {
+  clip: auto;
+  position: unset !important;
+}
+.node-job.node-teaser .date > span {
+  padding-left: 7px;
+}
+td.views-field-field-company-logo {
+  text-align: right;
+  padding-right: 0;
+}
+td.views-field-field-company-logo > img {
+  vertical-align: middle;
+}
+@media all and (min-width: 800px) {
+  .node-job.node-teaser .company-logo {
+    width: 15.41667%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5%;
+    display: inline;
+    clear: none;
+  }
+  .node-job.node-teaser .link-wrapper {
+    width: 100%;
+    margin-right: 0;
+    *margin-left: 0;
+    display: block;
+    clear: both;
+  }
+}
+
+.node-job.node-teaser .link-wrapper {
+  font-size: 0.8em;
+}

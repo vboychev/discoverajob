@@ -63,6 +63,15 @@ function recruiter_front_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = '<h2 class="hot-jobs-summary">Top @per_page of <a href="/search/job">@total</a> total jobs.</h2>';
+  /* Relationship: Indexed Node: Author */
+  $handler->display->display_options['relationships']['author']['id'] = 'author';
+  $handler->display->display_options['relationships']['author']['table'] = 'search_api_index_job_search';
+  $handler->display->display_options['relationships']['author']['field'] = 'author';
+  /* Relationship: User: Company profile */
+  $handler->display->display_options['relationships']['profile_company']['id'] = 'profile_company';
+  $handler->display->display_options['relationships']['profile_company']['table'] = 'entity_user';
+  $handler->display->display_options['relationships']['profile_company']['field'] = 'profile_company';
+  $handler->display->display_options['relationships']['profile_company']['relationship'] = 'author';
   /* Field: Indexed Node: Job URL */
   $handler->display->display_options['fields']['job_url']['id'] = 'job_url';
   $handler->display->display_options['fields']['job_url']['table'] = 'search_api_index_job_search';
@@ -92,6 +101,18 @@ function recruiter_front_views_default_views() {
   $handler->display->display_options['fields']['field_job_location']['field'] = 'field_job_location';
   $handler->display->display_options['fields']['field_job_location']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_job_location']['alter']['text'] = ', [field_job_location]';
+  /* Field: Profile: Logo */
+  $handler->display->display_options['fields']['field_company_logo']['id'] = 'field_company_logo';
+  $handler->display->display_options['fields']['field_company_logo']['table'] = 'entity_profile2';
+  $handler->display->display_options['fields']['field_company_logo']['field'] = 'field_company_logo';
+  $handler->display->display_options['fields']['field_company_logo']['relationship'] = 'profile_company';
+  $handler->display->display_options['fields']['field_company_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_company_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_company_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_company_logo']['settings'] = array(
+    'image_style' => 'company_logo_on_listings',
+    'image_link' => '',
+  );
   /* Sort criterion: Indexed Node: Date changed */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'search_api_index_job_search';
@@ -125,6 +146,24 @@ function recruiter_front_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['block_description'] = 'Front page job search';
+  $translatables['front_page_job_search'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<h2 class="hot-jobs-summary">Top @per_page of <a href="/search/job">@total</a> total jobs.</h2>'),
+    t('Author'),
+    t('Company profile'),
+    t('Title'),
+    t('Organization'),
+    t('Location'),
+    t(', [field_job_location]'),
+    t('Block'),
+    t('Front page job search'),
+  );
   $export['front_page_job_search'] = $view;
 
   return $export;
