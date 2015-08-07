@@ -5,6 +5,30 @@
  */
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function job_feature_recruiter_company_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: company_logo_on_listings.
+  $styles['company_logo_on_listings'] = array(
+    'label' => 'Company logo on listings (137x92)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 137,
+          'height' => 92,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_default_profile2_type().
  */
 function job_feature_recruiter_company_default_profile2_type() {

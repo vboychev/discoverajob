@@ -22,4 +22,5 @@ features[field_instance][] = profile2-company-field_company_logo
 features[field_instance][] = profile2-company-field_company_name
 features[field_instance][] = profile2-company-field_company_video
 features[field_instance][] = profile2-company-field_company_website
+features[image][] = company_logo_on_listings
 features[profile2_type][] = company
