@@ -175,6 +175,14 @@ function recruiter_job_application_default_rules_configuration() {
                   "data" : [ "message:arguments:reasonmsg" ],
                   "value" : [ "node:field-job-application-rej-msg" ]
                 }
+              },
+              { "mail" : {
+                  "to" : [ "node:author:mail" ],
+                  "subject" : "You have been rejected",
+                  "message" : "[node:field-job-application-rej-msg]",
+                  "from" : "[site:mail]",
+                  "language" : [ "" ]
+                }
               }
             ],
             "LABEL" : "Write message log"
