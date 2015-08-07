@@ -11,4 +11,5 @@ dependencies[] = job_feature_recruiter_company
 dependencies[] = metatag
 dependencies[] = module_filter
 dependencies[] = video_embed_field
+dependencies[] = menu_icons
 features[features_api][] = api:2
