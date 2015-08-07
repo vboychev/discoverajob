@@ -32,6 +32,7 @@ function recruiter_resume_search_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Find resumes';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '25';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -44,6 +45,13 @@ function recruiter_resume_search_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = '<h1 class="search-result-header">@total Resumes found</h1>';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'agent box';
+  $handler->display->display_options['header']['area']['content'] = '<div class="agent-box"><span class="agent-info">Get notified for similar resumes?</span> <span class="agent-link"><a href="#save-search">Subscribe using the Resume Agent!</a></span></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -100,6 +108,8 @@ function recruiter_resume_search_views_default_views() {
     t('next ›'),
     t('last »'),
     t('<h1 class="search-result-header">@total Resumes found</h1>'),
+    t('agent box'),
+    t('<div class="agent-box"><span class="agent-info">Get notified for similar resumes?</span> <span class="agent-link"><a href="#save-search">Subscribe using the Resume Agent!</a></span></div>'),
     t('No resumes found.'),
     t('What?'),
     t('Page'),
