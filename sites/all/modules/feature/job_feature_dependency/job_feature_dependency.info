@@ -12,6 +12,7 @@ dependencies[] = metatag
 dependencies[] = module_filter
 dependencies[] = search_api_autocomplete
 dependencies[] = video_embed_field
+dependencies[] = menu_icons
 dependencies[] = views_autocomplete_filters
 features[features_api][] = api:2
 features[user_permission][] = use search_api_autocomplete for search_api_views_front_page_job_search
