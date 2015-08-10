@@ -28,22 +28,6 @@ function recruiter_job_views_api($module = NULL, $api = NULL) {
  */
 function recruiter_job_node_info() {
   $items = array(
-    'job_per_file' => array(
-      'name' => t('Job per file upload'),
-      'base' => 'node_content',
-      'description' => t('Create a new job by uploading a file, e.g. a PDF file.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'job_per_link' => array(
-      'name' => t('Job per link'),
-      'base' => 'node_content',
-      'description' => t('Provide a reference to an already existing job.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'job_per_template' => array(
       'name' => t('Job per template'),
       'base' => 'node_content',
