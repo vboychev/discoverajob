@@ -40,9 +40,7 @@ function recruiter_job_search_flag_default_flags() {
     'title' => 'Job bookmarks',
     'global' => 0,
     'types' => array(
-      0 => 'job_per_file',
-      1 => 'job_per_link',
-      2 => 'job_per_template',
+      0 => 'job_per_template',
     ),
     'flag_short' => 'Bookmark job',
     'flag_long' => '',
