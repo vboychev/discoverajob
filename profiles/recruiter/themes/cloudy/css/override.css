@@ -55,6 +55,9 @@ td.views-field-field-company-logo > img {
 .page-recruiter h1.title.anon-title {
   display: block;
 }
+.block-user-menu.block--menu {
+  top: 5em;
+}
 @media all and (min-width: 800px) {
   .l-region--navigation-container {
     border-bottom: 0;
