@@ -1,32 +1,34 @@
 <div id="page" class="page">
   <header id="header" class="header" role="banner">
-    <div id="topbar" class="topbar">
-      <?php if ($site_name || $site_slogan || $logo): ?>
-        <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo"></a>
-        <?php endif; ?>
-
-        <?php if ($site_name || $site_slogan): ?>
-        <hgroup class="name-and-slogan">
-          <?php if ($site_name): ?>
-          <h1 class="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-          <?php endif; ?>
-
-          <?php if ($site_slogan): ?>
-          <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
-        </hgroup>
-        <?php endif; ?>
-      <?php endif; ?>
-    </div>
-
     <?php if ($navigation = render($page['navigation'])): ?>
     <div id="l-region--navigation-container" class="l-region--navigation-container">
       <?php print $navigation; ?>
     </div>
     <?php endif; ?>
+
+    <div class="topbar-wrapper">
+      <div id="topbar" class="topbar">
+        <?php if ($site_name || $site_slogan || $logo): ?>
+          <?php if ($logo): ?>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo"></a>
+          <?php endif; ?>
+
+          <?php if ($site_name || $site_slogan): ?>
+          <hgroup class="name-and-slogan">
+            <?php if ($site_name): ?>
+            <h1 class="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </h1>
+            <?php endif; ?>
+
+            <?php if ($site_slogan): ?>
+            <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
+            <?php endif; ?>
+          </hgroup>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div>
+    </div>
   </header>
 
   <div id="main-wrapper" class="main-wrapper">
