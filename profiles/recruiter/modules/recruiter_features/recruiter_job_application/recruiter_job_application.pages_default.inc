@@ -668,20 +668,7 @@ function recruiter_job_application_default_page_manager_pages() {
   $page->access = array(
     'type' => 'none',
     'settings' => NULL,
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 30037204,
-            1 => 100482362,
-            2 => 29617163,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array(
@@ -861,6 +848,18 @@ function recruiter_job_application_default_page_manager_pages() {
             0 => 'logged-in-user',
             1 => 'argument_entity_id:node_1',
           ),
+          'not' => FALSE,
+        ),
+        2 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 30037204,
+              1 => 100482362,
+              2 => 29617163,
+            ),
+          ),
+          'context' => 'logged-in-user',
           'not' => FALSE,
         ),
       ),

@@ -63,6 +63,7 @@ function recruiter_menu_menu_alter(&$items) {
   $items['resume']['access callback'] = 'recruiter_menu_menu_access_callback';
   $items['search/resume']['access callback'] = 'recruiter_menu_menu_access_callback';
   $items['manage/job']['access callback'] = 'recruiter_menu_menu_access_callback';
+  $items['recruiter/applications']['access callback'] = 'recruiter_menu_menu_access_callback';
 }
 
 function recruiter_menu_menu_access_callback($perm = "") {
