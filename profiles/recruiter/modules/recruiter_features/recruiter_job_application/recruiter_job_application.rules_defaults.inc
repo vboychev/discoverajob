@@ -178,7 +178,7 @@ function recruiter_job_application_default_rules_configuration() {
               },
               { "mail" : {
                   "to" : [ "node:author:mail" ],
-                  "subject" : "You have been rejected",
+                  "subject" : "Your application has been rejected",
                   "message" : "[node:field-job-application-rej-msg]",
                   "from" : "[site:mail]",
                   "language" : [ "" ]
