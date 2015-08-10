@@ -45,30 +45,6 @@ function recruiter_job_user_default_permissions() {
     'module' => 'field_permissions',
   );
 
-  // Exported permission: 'create job_per_file content'.
-  $permissions['create job_per_file content'] = array(
-    'name' => 'create job_per_file content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'create job_per_link content'.
-  $permissions['create job_per_link content'] = array(
-    'name' => 'create job_per_link content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create job_per_template content'.
   $permissions['create job_per_template content'] = array(
     'name' => 'create job_per_template content',
@@ -77,28 +53,6 @@ function recruiter_job_user_default_permissions() {
       'content admin' => 'content admin',
       'job admin' => 'job admin',
       'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any job_per_file content'.
-  $permissions['delete any job_per_file content'] = array(
-    'name' => 'delete any job_per_file content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete any job_per_link content'.
-  $permissions['delete any job_per_link content'] = array(
-    'name' => 'delete any job_per_link content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
     ),
     'module' => 'node',
   );
@@ -114,30 +68,6 @@ function recruiter_job_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete own job_per_file content'.
-  $permissions['delete own job_per_file content'] = array(
-    'name' => 'delete own job_per_file content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own job_per_link content'.
-  $permissions['delete own job_per_link content'] = array(
-    'name' => 'delete own job_per_link content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete own job_per_template content'.
   $permissions['delete own job_per_template content'] = array(
     'name' => 'delete own job_per_template content',
@@ -146,28 +76,6 @@ function recruiter_job_user_default_permissions() {
       'content admin' => 'content admin',
       'job admin' => 'job admin',
       'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any job_per_file content'.
-  $permissions['edit any job_per_file content'] = array(
-    'name' => 'edit any job_per_file content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit any job_per_link content'.
-  $permissions['edit any job_per_link content'] = array(
-    'name' => 'edit any job_per_link content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
     ),
     'module' => 'node',
   );
@@ -192,30 +100,6 @@ function recruiter_job_user_default_permissions() {
       'job admin' => 'job admin',
     ),
     'module' => 'field_permissions',
-  );
-
-  // Exported permission: 'edit own job_per_file content'.
-  $permissions['edit own job_per_file content'] = array(
-    'name' => 'edit own job_per_file content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own job_per_link content'.
-  $permissions['edit own job_per_link content'] = array(
-    'name' => 'edit own job_per_link content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content admin' => 'content admin',
-      'job admin' => 'job admin',
-      'recruiter' => 'recruiter',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit own job_per_template content'.

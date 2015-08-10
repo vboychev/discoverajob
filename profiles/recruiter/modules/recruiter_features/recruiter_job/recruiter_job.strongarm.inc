@@ -250,20 +250,6 @@ function recruiter_job_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_job_per_file';
-  $strongarm->value = '1';
-  $export['node_preview_job_per_file'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_job_per_link';
-  $strongarm->value = '1';
-  $export['node_preview_job_per_link'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_job_per_template';
   $strongarm->value = '1';
   $export['node_preview_job_per_template'] = $strongarm;
