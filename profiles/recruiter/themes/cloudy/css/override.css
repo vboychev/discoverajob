@@ -52,6 +52,9 @@ td.views-field-field-company-logo > img {
 .topbar-wrapper {
   border-bottom: 5px solid #2e2e2c;
 }
+.page-recruiter h1.title.anon-title {
+  display: block;
+}
 @media all and (min-width: 800px) {
   .l-region--navigation-container {
     border-bottom: 0;
