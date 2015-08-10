@@ -27,3 +27,22 @@ function cloudy_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'addressfield') . '/addressfield.css']);
   unset($css[drupal_get_path('module', 'date_api') . '/date.css']);
 }
+
+function cloudy_preprocess_menu_link(&$variables) {
+  if (!empty($variables['element']['#theme']) && $variables['element']['#theme'] == 'menu_link__menu_login_menu' && $variables['element']['#href'] == 'user/register') {
+    $recruiter_urls = array(
+      'recruiter',
+      'recruiter/applications',
+      'recruiter/applications/all',
+      'recruiter/applications/shortlisted',
+      'recruiter/applications/rejected',
+      'manage/job',
+      'search/resume',
+      'profile-company'
+    );
+
+    if (in_array(current_path(), $recruiter_urls)) {
+      $variables['element']['#href'] = 'user/register/recruiter';
+    }
+  }
+}
