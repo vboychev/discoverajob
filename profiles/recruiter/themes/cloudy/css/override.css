@@ -58,6 +58,19 @@ td.views-field-field-company-logo > img {
 .block-user-menu.block--menu {
   top: 5em;
 }
+.node-job.node-teaser .link-wrapper {
+  font-size: 0.8em;
+}
+
+ul.node__links li {
+  list-style: none;
+}
+.node-teaser ul.rules-links li {
+  list-style: none;
+}
+ul.node__links li:first-child {
+  margin-left: 0;
+}
 @media all and (min-width: 800px) {
   .l-region--navigation-container {
     border-bottom: 0;
@@ -76,9 +89,7 @@ td.views-field-field-company-logo > img {
     *margin-left: 0;
     display: block;
     clear: both;
+    float: left;
+    margin-left: 16.9167%;
   }
-}
-
-.node-job.node-teaser .link-wrapper {
-  font-size: 0.8em;
 }
