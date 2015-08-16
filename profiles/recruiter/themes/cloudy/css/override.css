@@ -93,3 +93,28 @@ ul.node__links li:first-child {
     margin-left: 16.9167%;
   }
 }
+
+#block-menu-menu-social-links {
+    float: right;
+    width: 150px;
+}
+
+#block-menu-menu-social-links h2 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+
+#block-menu-menu-social-links ul.menu li {
+    float: left;
+}
+#block-menu-menu-social-links ul.menu li a {
+    color: transparent;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    height: 32px;
+    width: 32px;
+    padding-left: 0;
+    padding-right: 4px;
+}
