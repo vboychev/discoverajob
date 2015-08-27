@@ -118,3 +118,15 @@ ul.node__links li:first-child {
     padding-left: 0;
     padding-right: 4px;
 }
+
+tr.even, .view-job-search .views-row-odd {
+    background-color: white !important;
+}
+
+.view-front-page-job-search table tr, .view-job-search .views-row {
+    border-bottom: 3px solid #efefef;
+}
+
+.view-front-page-job-search table tr:last-child, .view-job-search .views-row:last-child {
+    border: none;
+}
