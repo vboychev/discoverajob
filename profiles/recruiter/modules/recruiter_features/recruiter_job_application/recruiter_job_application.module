@@ -81,7 +81,7 @@ function recruiter_job_application_get_link($node) {
   $link = array(
     'title' => '<span>' .  t('Apply', array(), array('context' => 'recruiter_job_application')) . '</span>',
     'href' => 'node/' . $node->nid . '/apply',
-    'attributes' => array('title' => t('Apply', array(), array('context' => 'recruiter_job_application')), 'target' => '_blank'),
+    'attributes' => array('title' => t('Apply', array(), array('context' => 'recruiter_job_application')), 'target' => '_self'),
     'html' => TRUE,
   );
 
