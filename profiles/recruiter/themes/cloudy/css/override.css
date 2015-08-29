@@ -134,3 +134,12 @@ tr.even, .view-job-search .views-row-odd {
 .node--job-per-template ul.links--inline li {
     display: inline;
 }
+
+body.node-type-job-per-template .node--job-per-template--full .field--name-body .field__label {
+    float: left !important;
+    margin-top: 8px !important;
+    margin-right: 8px !important;
+}
+.node--job-per-template--full .field--name-body .field__items {
+    width: 90%;
+}
