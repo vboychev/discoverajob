@@ -34,7 +34,6 @@ function recruiter_job_preprocess_node(&$node) {
     // Use the calculate link for the button.
     $job_url = recruiter_job_get_url($node['node']);
     $node['job_url'] = $job_url;
-    $job_link_content = array('#markup' => '<div class="job-link-wrapper"><a href="' . check_plain($job_url) . '" class="recruiter-job-link" rel="nofollow">' . t('Show job') . '</a></div>', '#weight' => -10);
 
     if ($node['view_mode'] == 'teaser') {
       // Check if the values are already set by other modules. If not, init them
