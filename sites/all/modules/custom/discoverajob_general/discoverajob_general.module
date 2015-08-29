@@ -37,4 +37,8 @@ function discoverajob_general_menu_local_tasks_alter(&$data, $router_item, $root
     // Hide 'View' tab on user profile page.
     unset($data['tabs'][0]['output'][0]);
   }
+  if ($root_path == 'recruiter/applications' || $root_path == 'applications/shortlisted') {
+    // Hide 'Rejected' tab on applications page.
+    unset($data['tabs'][0]['output'][2]);
+  }
 }
