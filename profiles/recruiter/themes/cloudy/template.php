@@ -46,3 +46,11 @@ function cloudy_preprocess_menu_link(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function cloudy_form_user_profile_form_alter(&$form, $form_state) {
+  // Hide language settings on user profile page.
+  unset($form['locale']);
+}
