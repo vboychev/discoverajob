@@ -130,3 +130,7 @@ tr.even, .view-job-search .views-row-odd {
 .view-front-page-job-search table tr:last-child, .view-job-search .views-row:last-child {
     border: none;
 }
+
+.node--job-per-template ul.links--inline li {
+    display: inline;
+}

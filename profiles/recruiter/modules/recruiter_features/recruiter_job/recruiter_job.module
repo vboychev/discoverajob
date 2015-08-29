@@ -34,7 +34,7 @@ function recruiter_job_preprocess_node(&$node) {
     // Use the calculate link for the button.
     $job_url = recruiter_job_get_url($node['node']);
     $node['job_url'] = $job_url;
-
+    $job_link_content = '';
     if ($node['view_mode'] == 'teaser') {
       // Check if the values are already set by other modules. If not, init them
       // with our configuration.
