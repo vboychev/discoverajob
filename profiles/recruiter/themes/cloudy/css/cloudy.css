@@ -2628,52 +2628,6 @@ div.messages ul {
     float: none;
   }
 
-  /* line 89, ../sass/cloudy/styles/_navigation.scss */
-  .block-main-menu > ul.menu > li.last {
-    margin-top: 0.25em;
-    font-size: 0.82em;
-    float: right;
-  }
-  /* line 94, ../sass/cloudy/styles/_navigation.scss */
-  .block-main-menu > ul.menu > li.last a {
-    color: white;
-    background-color: #2e2e2c;
-    border: 1px solid #1a1a1a;
-    padding: 1em;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    font-weight: bold;
-    text-align: center;
-    padding: .5em 1em;
-    cursor: pointer;
-    padding: .35em .5em;
-  }
-  /* line 14, ../layouts/epiqo/sass/omega/utility/_buttons.scss */
-  .block-main-menu > ul.menu > li.last a:hover, .block-main-menu > ul.menu > li.last a:focus, .block-main-menu > ul.menu > li.last a:active {
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background-color: #373730;
-    border-color: #070707;
-    text-decoration: none;
-  }
-  /* line 21, ../layouts/epiqo/sass/omega/utility/_buttons.scss */
-  .block-main-menu > ul.menu > li.last a:active {
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-  }
-  /* line 98, ../sass/cloudy/styles/_navigation.scss */
-  .block-main-menu > ul.menu > li.last a:hover, .block-main-menu > ul.menu > li.last a:focus, .block-main-menu > ul.menu > li.last a:active {
-    background-color: #c9dd19;
-    color: #2e2e2c;
-  }
 
   /* line 105, ../sass/cloudy/styles/_navigation.scss */
   .block-user-menu.block--menu {

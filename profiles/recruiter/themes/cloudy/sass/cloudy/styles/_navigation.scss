@@ -85,23 +85,6 @@
     }
   }
 
-  // Recruiter applicant menu switch
-  .block-main-menu > ul.menu > li.last {
-    margin-top: 0.25em;
-    font-size: 0.82em;
-    float: right;
-
-    a {
-      @include button($narrow-menu-last-button-text-color, $narrow-menu-last-button-background-color);
-      padding: .35em .5em;
-
-      &:hover, &:focus, &:active {
-        background-color: $narrow-menu-last-button-hover-background-color;
-        color: $narrow-menu-last-button-hover-text-color;
-      }
-    }
-  }
-
   .block-user-menu.block--menu {
     font-family: $font-family-normal;
     width: auto;
