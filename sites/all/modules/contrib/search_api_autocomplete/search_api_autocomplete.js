@@ -19,7 +19,8 @@ if (typeof Drupal.jsAC != 'undefined') {
 
     if (13 == e.keyCode && $(input).hasClass('auto_submit')) {
       var selector;
-      if (typeof Drupal.settings.search_api_autocomplete.selector != 'undefined') {
+      if (typeof Drupal.settings.search_api_autocomplete != 'undefined'
+          && typeof Drupal.settings.search_api_autocomplete.selector != 'undefined') {
         selector = Drupal.settings.search_api_autocomplete.selector;
       }
       else {
@@ -62,7 +63,8 @@ if (typeof Drupal.jsAC != 'undefined') {
       }
       else {
         var selector;
-        if (typeof Drupal.settings.search_api_autocomplete.selector != 'undefined') {
+        if (typeof Drupal.settings.search_api_autocomplete != 'undefined'
+            && typeof Drupal.settings.search_api_autocomplete.selector != 'undefined') {
           selector = Drupal.settings.search_api_autocomplete.selector;
         }
         else {
