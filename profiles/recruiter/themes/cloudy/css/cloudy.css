@@ -819,7 +819,7 @@ a {
 }
 /* line 11, ../sass/cloudy/typography/_links.scss */
 a:link, a:visited {
-  color: #af0136;
+  color: #0E2E49;
   text-decoration: none;
 }
 /* line 16, ../sass/cloudy/typography/_links.scss */
@@ -1360,7 +1360,7 @@ thead, table {
 
 /* line 20, ../sass/cloudy/typography/_tables.scss */
 tbody {
-  border-top-color: #af0136;
+  border-top-color: #0E2E49;
   border-top-style: solid;
   border-top-width: 5px;
   border-bottom-color: #2e2e2c;
@@ -1709,7 +1709,7 @@ body.slim-mode.node-type-job-per-link, body.slim-mode.note-type-job-per-file {
 @media all and (max-width: 800px) {
   /* line 2, ../sass/cloudy/layout/_header.scss */
   .topbar {
-    background-color: #af0136;
+    background-color: #0E2E49;
     border-bottom: 3px solid #2e2e2c;
   }
 }
@@ -2387,7 +2387,7 @@ div.form-item div.password-suggestions {
 .field.field--type-field-collection > .field__label {
   margin-bottom: 1em;
   font-size: 1.4em;
-  border-bottom: 3px solid #af0136;
+  border-bottom: 3px solid #0E2E49;
 }
 
 /* line 9, ../sass/cloudy/styles/_collections.scss */
@@ -2461,7 +2461,7 @@ div.form-item div.password-suggestions {
 }
 /* line 73, ../sass/cloudy/styles/_collections.scss */
 .field-collection-container ul.action-links-field-collection-add a {
-  background-color: #af0136;
+  background-color: #0E2E49;
   color: white;
 }
 /* line 77, ../sass/cloudy/styles/_collections.scss */
@@ -2566,7 +2566,7 @@ div.messages ul {
 @media all and (min-width: 800px) {
   /* line 35, ../sass/cloudy/styles/_navigation.scss */
   .l-region--navigation-container {
-    background: #af0136;
+    background: #0E2E49;
     border-bottom: 5px solid #2e2e2c;
   }
 
@@ -2654,7 +2654,7 @@ div.messages ul {
   }
   /* line 125, ../sass/cloudy/styles/_navigation.scss */
   .block-user-menu.block--menu ul.menu a:hover, .block-user-menu.block--menu ul.menu a:focus, .block-user-menu.block--menu ul.menu a:active {
-    color: #af0136;
+    color: #0E2E49;
   }
 }
 /* line 1, ../sass/cloudy/styles/_overlay.scss */
@@ -2668,7 +2668,7 @@ div.messages ul {
   margin: 0 0 1em 0;
   font-size: 1.5em;
   font-weight: normal;
-  border-bottom: 5px solid #af0136;
+  border-bottom: 5px solid #0E2E49;
 }
 
 /* line 14, ../sass/cloudy/styles/_overlay.scss */
@@ -2735,7 +2735,7 @@ ul.tabs--primary a:hover, ul.tabs--primary a:focus, ul.tabs--primary a:active, u
 
 /* line 2, ../sass/cloudy/styles/_resume.scss */
 .block--recruiter-resume .state-info-box .state-info-text {
-  background-color: #af0136;
+  background-color: #0E2E49;
   color: #efefef;
 }
 /* line 9, ../sass/cloudy/styles/_resume.scss */
@@ -2814,7 +2814,7 @@ ul.tabs--primary a:hover, ul.tabs--primary a:focus, ul.tabs--primary a:active, u
     border-bottom-right-radius: 5px;
     top: 3.6em;
     right: -35px;
-    background: #af0136 url("../images/filter-icon.png") no-repeat 45% 50%;
+    background: #0E2E49 url("../images/filter-icon.png") no-repeat 45% 50%;
     background-size: 35%;
   }
   /* line 15, ../sass/cloudy/styles/_sidebar.scss */
@@ -2826,7 +2826,7 @@ ul.tabs--primary a:hover, ul.tabs--primary a:focus, ul.tabs--primary a:active, u
   html.js .l-sidebar-first-container {
     color: #efefef;
     background-color: #2e2e2c;
-    border-right: 5px solid #af0136;
+    border-right: 5px solid #0E2E49;
   }
   /* line 26, ../sass/cloudy/typography/_links.scss */
   html.js .l-sidebar-first-container a {
