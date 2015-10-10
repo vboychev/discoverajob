@@ -191,3 +191,31 @@ body.node-type-job-per-template .node--job-per-template--full .field--name-body 
     background-color: #c9dd19;
     color: #2e2e2c;
 }
+
+.page-profile-resume .tabs {
+  display: none;
+}
+
+.job-application__links ul li {
+  margin-left: 0;
+}
+
+//sticky footer
+html, body {
+  height: 100% !important;
+}
+.page {
+  min-height: 100% !important;
+  position: relative !important;
+}
+.main-wrapper {
+  padding-bottom: 74px;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 74px;
+}
+//sticky footer end
