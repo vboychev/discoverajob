@@ -2857,15 +2857,6 @@ ul.tabs--primary a:hover, ul.tabs--primary a:focus, ul.tabs--primary a:active, u
     padding: 6px 9px;
     margin: 9px 0;
   }
-  .company-logo {
-    display: block !important;
-    margin-top: 34px !important;
-    position: absolute !important;
-  }
-
-  .company-logo img {
-    width: 90px !important;
-  }
 }
 /* line 1, ../sass/cloudy/styles/_job.scss */
 .view-front-page-job-search .views-field-title {
@@ -3061,22 +3052,3 @@ form .form-item.form-type-date-select label {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-//sticky footer
-html, body {
-  height: 100% !important;
-}
-.page {
-  min-height: 100% !important;
-  position: relative !important;
-}
-.main-wrapper {
-  padding-bottom: 100px;
-}
-
-.footer-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-}
-//sticky footer end
