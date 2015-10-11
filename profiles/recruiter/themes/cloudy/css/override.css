@@ -201,22 +201,25 @@ body.node-type-job-per-template .node--job-per-template--full .field--name-body 
 }
 
 //sticky footer
-html, body {
-  height: 100% !important;
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
 }
 .page {
   min-height: 100% !important;
   position: relative !important;
 }
 .main-wrapper {
-  padding-bottom: 100px;
+  padding-bottom: 100px !important;
 }
 
 .footer-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100px !important;
 }
 //sticky footer end
 @media all and (max-width: 800px) { 

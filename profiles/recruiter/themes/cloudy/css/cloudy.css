@@ -1330,6 +1330,15 @@ fieldset {
   .field-collection-container .field--type-term-level .field__items .field__item {
     margin-bottom: 0.5em;
   }
+  .company-logo {
+    display: block !important;
+    margin-top: 34px !important;
+    position: absolute !important;
+  }
+
+  .company-logo img {
+    width: 90px !important;
+  }
 }
 /* line 37, ../sass/cloudy/typography/_fields.scss */
 .field--type-term-level .term-level-field-label {
