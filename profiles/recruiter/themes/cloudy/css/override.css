@@ -50,7 +50,7 @@ td.views-field-field-company-logo > img {
     vertical-align: middle;
 }
 .topbar-wrapper {
-    border-bottom: 5px solid #2e2e2c;
+    border-top: 5px solid #2e2e2c;
 }
 .page-recruiter h1.title.anon-title {
     display: block;
@@ -232,4 +232,8 @@ body {
   .company-logo img {
     width: 90px !important;
   }
+}
+
+header {
+  background: rgba(230, 230, 230, 0.5);
 }

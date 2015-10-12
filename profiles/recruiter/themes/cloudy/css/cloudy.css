@@ -2387,8 +2387,8 @@ div.form-item div.password-suggestions {
   .logo {
     background: url("../images/logo.png") no-repeat 50% 50%;
     height: 50px;
-    width: 175px;
-    margin: 12px 0;
+    width: 220px;
+    margin: 40px 0 10px 0;
   }
 
   /* line 36, ../sass/cloudy/styles/_branding.scss */
@@ -2546,9 +2546,9 @@ div.messages ul {
 }
 
 /* line 7, ../sass/cloudy/styles/_navigation.scss */
-.block--toggle.block--toggle-block-system-user-menu, .block--toggle.block--toggle-block-menu-menu-login-menu {
+/*.block--toggle.block--toggle-block-system-user-menu, .block--toggle.block--toggle-block-menu-menu-login-menu {
   background-image: url("../images/user-menu-toggle.png");
-}
+}*/
 
 /* line 11, ../sass/cloudy/styles/_navigation.scss */
 .l-region--navigation {
@@ -2644,7 +2644,7 @@ div.messages ul {
 
 
   /* line 105, ../sass/cloudy/styles/_navigation.scss */
-  .block-user-menu.block--menu {
+/*  .block-user-menu.block--menu {
     font-family: "Ubuntu-R";
     width: auto;
     font-size: .8em;
@@ -2652,24 +2652,27 @@ div.messages ul {
     top: -3em;
     right: 10px;
   }
-  /* line 113, ../sass/cloudy/styles/_navigation.scss */
+   line 113, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu {
     font-size: 1em;
   }
-  /* line 116, ../sass/cloudy/styles/_navigation.scss */
+   line 116, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu li {
     margin-left: 1.25em;
   }
-  /* line 120, ../sass/cloudy/styles/_navigation.scss */
+   line 120, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu a {
     color: #2e2e2c;
     padding: 0 !important;
     background: transparent !important;
   }
-  /* line 125, ../sass/cloudy/styles/_navigation.scss */
+   line 125, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu a:hover, .block-user-menu.block--menu ul.menu a:focus, .block-user-menu.block--menu ul.menu a:active {
     color: #0E2E49;
-  }
+  }*/
+#block-menu-menu-login-menu, #block-system-user-menu {
+  float: right !important;
+}
 }
 /* line 1, ../sass/cloudy/styles/_overlay.scss */
 #overlay {
