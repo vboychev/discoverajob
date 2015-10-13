@@ -50,7 +50,7 @@ td.views-field-field-company-logo > img {
     vertical-align: middle;
 }
 .topbar-wrapper {
-    border-bottom: 5px solid #2e2e2c;
+    border-top: 5px solid #2e2e2c;
 }
 .page-recruiter h1.title.anon-title {
     display: block;
@@ -190,4 +190,50 @@ body.node-type-job-per-template .node--job-per-template--full .field--name-body 
 .block-main-menu > ul.menu > li.nav-right a:hover, .block-main-menu > ul.menu > li.nav-right a:focus, .block-main-menu > ul.menu > li.nav-right a:active {
     background-color: #c9dd19;
     color: #2e2e2c;
+}
+
+.page-profile-resume .tabs {
+  display: none;
+}
+
+.job-application__links ul li {
+  margin-left: 0;
+}
+
+//sticky footer
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.page {
+  min-height: 100% !important;
+  position: relative !important;
+}
+.main-wrapper {
+  padding-bottom: 100px !important;
+}
+
+.footer-container {
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100px !important;
+}
+//sticky footer end
+@media all and (max-width: 800px) { 
+  .company-logo {
+    display: block !important;
+    margin-top: 34px !important;
+    position: absolute !important;
+  }
+
+  .company-logo img {
+    width: 90px !important;
+  }
+}
+
+header {
+  background: rgba(230, 230, 230, 0.5);
 }

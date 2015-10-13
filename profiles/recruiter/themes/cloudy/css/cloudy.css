@@ -1330,6 +1330,15 @@ fieldset {
   .field-collection-container .field--type-term-level .field__items .field__item {
     margin-bottom: 0.5em;
   }
+  .company-logo {
+    display: block !important;
+    margin-top: 34px !important;
+    position: absolute !important;
+  }
+
+  .company-logo img {
+    width: 90px !important;
+  }
 }
 /* line 37, ../sass/cloudy/typography/_fields.scss */
 .field--type-term-level .term-level-field-label {
@@ -2167,6 +2176,11 @@ body.slim-mode.node-type-job-per-link, body.slim-mode.note-type-job-per-file {
     display: inline;
   }
 }
+@media all and (max-width: 480px) {
+  .view-job-search .links--inline li.last {
+    margin-left: 0;
+  }
+}
 /* line 1, ../sass/cloudy/layout/_job_applications.scss */
 .job-application__photo {
   display: none;
@@ -2373,8 +2387,8 @@ div.form-item div.password-suggestions {
   .logo {
     background: url("../images/logo.png") no-repeat 50% 50%;
     height: 50px;
-    width: 85px;
-    margin: 12px 0;
+    width: 220px;
+    margin: 40px 0 10px 0;
   }
 
   /* line 36, ../sass/cloudy/styles/_branding.scss */
@@ -2532,9 +2546,9 @@ div.messages ul {
 }
 
 /* line 7, ../sass/cloudy/styles/_navigation.scss */
-.block--toggle.block--toggle-block-system-user-menu, .block--toggle.block--toggle-block-menu-menu-login-menu {
+/*.block--toggle.block--toggle-block-system-user-menu, .block--toggle.block--toggle-block-menu-menu-login-menu {
   background-image: url("../images/user-menu-toggle.png");
-}
+}*/
 
 /* line 11, ../sass/cloudy/styles/_navigation.scss */
 .l-region--navigation {
@@ -2630,7 +2644,7 @@ div.messages ul {
 
 
   /* line 105, ../sass/cloudy/styles/_navigation.scss */
-  .block-user-menu.block--menu {
+/*  .block-user-menu.block--menu {
     font-family: "Ubuntu-R";
     width: auto;
     font-size: .8em;
@@ -2638,24 +2652,27 @@ div.messages ul {
     top: -3em;
     right: 10px;
   }
-  /* line 113, ../sass/cloudy/styles/_navigation.scss */
+   line 113, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu {
     font-size: 1em;
   }
-  /* line 116, ../sass/cloudy/styles/_navigation.scss */
+   line 116, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu li {
     margin-left: 1.25em;
   }
-  /* line 120, ../sass/cloudy/styles/_navigation.scss */
+   line 120, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu a {
     color: #2e2e2c;
     padding: 0 !important;
     background: transparent !important;
   }
-  /* line 125, ../sass/cloudy/styles/_navigation.scss */
+   line 125, ../sass/cloudy/styles/_navigation.scss 
   .block-user-menu.block--menu ul.menu a:hover, .block-user-menu.block--menu ul.menu a:focus, .block-user-menu.block--menu ul.menu a:active {
     color: #0E2E49;
-  }
+  }*/
+#block-menu-menu-login-menu, #block-system-user-menu {
+  float: right !important;
+}
 }
 /* line 1, ../sass/cloudy/styles/_overlay.scss */
 #overlay {
@@ -2803,7 +2820,7 @@ ul.tabs--primary a:hover, ul.tabs--primary a:focus, ul.tabs--primary a:active, u
   display: none;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 800px) {  
   /* line 8, ../sass/cloudy/styles/_sidebar.scss */
   .sidebar-first-toggle {
     -moz-border-radius-topright: 5px;
