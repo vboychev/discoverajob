@@ -247,6 +247,7 @@ function recruiter_job_application_preprocess_node(&$variables) {
     // Load the personal_information of the applicant and get his photo and his
     // name.
     $field_personal_information = field_collection_item_load($resume->field_resume_personal_info[LANGUAGE_NONE][0]['value']);
+    $field_additional_fields = field_collection_item_load($resume->field_additional_fields[LANGUAGE_NONE][0]['value']);
 
     $first_name = $field_personal_information->field_resume_firstname[LANGUAGE_NONE][0]['safe_value'];
     $last_name = $field_personal_information->field_resume_lastname[LANGUAGE_NONE][0]['safe_value'];
@@ -289,7 +290,7 @@ function recruiter_job_application_preprocess_node(&$variables) {
       );
 
       if (recruiter_resume_private_fields_view_access('field_resume_personal_info', $resume, $user) && profile2_access('view', $resume, $user)) {
-        $variables['photo'] = field_view_field('field_collection_item', $field_personal_information, 'field_resume_photo', $display);
+        $variables['photo'] = field_view_field('field_collection_item', $field_additional_fields, 'field_resume_photo', $display);
       }
 
       // Add a separate submitted variable which will be renderer like a field

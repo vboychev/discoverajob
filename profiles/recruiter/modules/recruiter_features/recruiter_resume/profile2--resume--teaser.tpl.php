@@ -41,8 +41,9 @@
 
         <?php
           $field_collection_personal_info = reset($content['field_resume_personal_info']['0']['entity']['field_collection_item']);
-          if (!empty($field_collection_personal_info['field_resume_photo']) && $content['field_resume_personal_info']['#access']) {
-            print render($field_collection_personal_info['field_resume_photo']);
+          $field_additional_fields = reset($content['field_additional_fields']['0']['entity']['field_collection_item']);
+          if (!empty($field_additional_fields['field_resume_photo']) && $content['field_resume_personal_info']['#access']) {
+            print render($field_additional_fields['field_resume_photo']);
           }
           else {
             print theme_image(array('path' => drupal_get_path('module', 'recruiter_resume') . '/resume_default.jpg', 'attributes' => array()));
