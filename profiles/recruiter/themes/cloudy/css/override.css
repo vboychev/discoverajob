@@ -237,3 +237,20 @@ body {
 header {
   background: rgba(230, 230, 230, 0.5);
 }
+
+.field:not(.field--type-field-collection):not(.field--label-hidden), .field.field--type-term-level {
+  width: 82.625% !important;
+  padding-left: 28.375% !important;
+}
+
+.page-search-resume .view-content {
+  margin-bottom: 15px !important;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  display: none !important;
+}
+
+.page-search-resume .resume-teaser-container .resume-teaser-sidebar {
+  margin-top: -50px !important;
+}
