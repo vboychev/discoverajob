@@ -250,3 +250,7 @@ header {
 .tabledrag-toggle-weight-wrapper {
   display: none !important;
 }
+
+.page-search-resume .resume-teaser-container .resume-teaser-sidebar {
+  margin-top: -50px !important;
+}
