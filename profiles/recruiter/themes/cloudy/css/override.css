@@ -254,3 +254,11 @@ header {
 .page-search-resume .resume-teaser-container .resume-teaser-sidebar {
   margin-top: -50px !important;
 }
+
+.field-collection-item-field-resume-education .resume-time-period {
+  margin-left: 0px !important;
+}
+
+.field-collection-item-field-resume-xp .resume-time-period {
+  margin-left: 0px !important;
+}
