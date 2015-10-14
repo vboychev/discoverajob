@@ -20,7 +20,7 @@ function cloudy_process_entity(&$variables) {
       );
 
       if (!empty($faf->field_resume_photo)) {
-        $content['field_resume_photo']['#markup'] = field_view_field('field_collection_item', $faf, 'field_resume_photo', $display);
+        $content['field_resume_photo'] = field_view_field('field_collection_item', $faf, 'field_resume_photo', $display);
       }
     }
     
