@@ -51,9 +51,9 @@
         ?>
         </div>
 
-        <?php if (!empty($field_collection_personal_info['contact'])): ?>
+        <?php if (!empty($field_collection_personal_info['field_resume_mail'][0])): ?>
           <div class="resume-teaer-contact-link">
-            <?php print render($field_collection_personal_info['contact']); ?>
+            <?php print render($field_collection_personal_info['field_resume_mail'][0]); ?>
           </div>
        <?php endif; ?>
       </div>
