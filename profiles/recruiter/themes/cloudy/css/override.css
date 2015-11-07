@@ -266,3 +266,43 @@ header {
 .main-wrapper {
   padding-bottom: 150px !important;
 }
+
+.node-job.node--full ul.links a {
+  color: #2e2e2c;
+  background-color: #c9dd19;
+  border: 1px solid #a1b020;
+  padding: 1em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  padding: .5em 1em;
+  cursor: pointer;
+  border-bottom: 5px solid #9faf14;
+  display: block;
+}
+
+.node-job.node--full ul.links a:hover, .node-job.node--full ul.links a:focus, .node-job.node--full ul.links a:active {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #d6ec17;
+  border-color: #7d8722;
+  text-decoration: none;
+}
+
+.node-job.node--full ul.links a:active {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.node-job.node--full ul.links a:hover, .node-job.node--full ul.links a:focus, .node-job.node--full ul.links a:active {
+  border-color: #2e2e2c;
+}
