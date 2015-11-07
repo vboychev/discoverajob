@@ -285,7 +285,7 @@ header {
   padding: .5em 1em;
   cursor: pointer;
   border-bottom: 5px solid #9faf14;
-  display: block;
+  display: inline;
 }
 
 .node-job.node--full ul.links a:hover, .node-job.node--full ul.links a:focus, .node-job.node--full ul.links a:active {
