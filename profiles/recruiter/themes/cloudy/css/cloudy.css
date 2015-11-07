@@ -1294,7 +1294,7 @@ fieldset {
     display: block;
   }
   /* line 12, ../layouts/epiqo/sass/omega/utility/_fields.scss */
-  .node-job.node--full .field:not(.field--type-field-collection):not(.field--label-hidden).field--type-text-with-summary .field__label, .field:not(.field--type-field-collection):not(.field--label-hidden) .field__label, .field:not(.field--type-field-collection):not(.field--label-hidden) .term-level-field-label, .field.field--type-term-level .field__label, .field.field--type-term-level .term-level-field-label {
+  .node-job.node--full .field.field--type-text-with-summary:not(.field--type-field-collection):not(.field--label-hidden) .field__label, .field:not(.field--type-field-collection):not(.field--label-hidden) .field__label, .field:not(.field--type-field-collection):not(.field--label-hidden) .term-level-field-label, .field.field--type-term-level .field__label, .field.field--type-term-level .term-level-field-label {
     width: 23.875%;
     float: left;
     margin-right: 1.5%;
