@@ -262,3 +262,7 @@ header {
 .field-collection-item-field-resume-xp .resume-time-period {
   margin-left: 0px !important;
 }
+
+.main-wrapper {
+  padding-bottom: 150px !important;
+}
