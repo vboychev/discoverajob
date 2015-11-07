@@ -53,7 +53,7 @@
 
         <?php if (!empty($field_collection_personal_info['field_resume_mail'][0])): ?>
           <div class="resume-teaer-contact-link">
-            <?php print render($field_collection_personal_info['field_resume_mail'][0]); ?>
+            <a href="mailto: <?php print strip_tags(render($field_collection_personal_info['field_resume_mail'][0])); ?>"><?php print t('Contact'); ?></a>
           </div>
        <?php endif; ?>
       </div>
