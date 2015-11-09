@@ -2386,9 +2386,9 @@ div.form-item div.password-suggestions {
   /* line 29, ../sass/cloudy/styles/_branding.scss */
   .logo {
     background: url("../images/logo.png") no-repeat 50% 50%;
-    height: 50px;
-    width: 220px;
-    margin: 40px 0 10px 0;
+    height: 100px;
+    width: 340px;
+    margin: 6px 0 6px 0;
   }
 
   /* line 36, ../sass/cloudy/styles/_branding.scss */
