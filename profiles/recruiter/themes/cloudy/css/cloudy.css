@@ -1304,6 +1304,11 @@ fieldset {
     position: relative;
     margin-right: 0;
   }
+  /* line 12, ../layouts/epiqo/sass/omega/utility/_fields.scss */
+  .node-job.node--full .field.field--type-text-with-summary:not(.field--type-field-collection):not(.field--label-hidden) .field__label, .node-job.node--full .field:not(.field--type-field-collection):not(.field--label-hidden) .field__label, .node-job.node--full .field:not(.field--type-field-collection):not(.field--label-hidden) .term-level-field-label, .node-job.node--full .field.field--type-term-level .field__label, .node-job.node--full .field.field--type-term-level .term-level-field-label {
+    width: auto !important;
+    margin-left: 0px !important;
+  }
   /* line 21, ../sass/cloudy/typography/_fields.scss */
   .field:not(.field--type-field-collection):not(.field--label-hidden).field--type-text-with-summary, .field.field--type-term-level.field--type-text-with-summary {
     float: none;
@@ -2388,7 +2393,7 @@ div.form-item div.password-suggestions {
     background: url("../images/logo.png") no-repeat 50% 50%;
     height: 100px;
     width: 340px;
-    margin: 6px 0 6px 0;
+    margin: 15px 0 15px 0;
   }
 
   /* line 36, ../sass/cloudy/styles/_branding.scss */
