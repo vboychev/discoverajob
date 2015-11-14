@@ -243,6 +243,10 @@ header {
   padding-left: 28.375% !important;
 }
 
+.node-job.node--full .field:not(.field--type-field-collection):not(.field--label-hidden), .node-job.node--full .field.field--type-term-level {
+  padding-left: 0px !important;
+}
+
 .page-search-resume .view-content {
   margin-bottom: 15px !important;
 }
