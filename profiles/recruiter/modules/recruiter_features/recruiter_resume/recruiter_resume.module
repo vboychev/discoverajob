@@ -368,18 +368,6 @@ function recruiter_resume_profile2_view($profile, $view_mode, $langcode) {
     $profile_user = user_load($profile->uid);
     $field_id = $profile->field_resume_personal_info[LANGUAGE_NONE][0]['value'];
 
-    // We imitate the markup of fields so that it has a consistent look.
-    $mail_markup =
-      '<div class="field mail field-label-inline clearfix"><div class="field-label">' .
-        t('Email') . ':&nbsp;</div><div class="field-items"><div class="field-item even">' .
-        l($profile_user->mail, 'mailto:' . $profile_user->mail) .
-        '</div></div></div>';
-
-    $profile->content['field_resume_personal_info'][0]['entity']['field_collection_item'][$field_id]['field_user_mail'] = array(
-      '#markup' => $mail_markup,
-      '#weight' => 5,
-    );
-
     // Add 'Contact' link with the applicant's email address on the resume
     // teaser in case the current user has access to the personal information.
     if ($view_mode == 'teaser' && recruiter_resume_private_fields_view_access('field_resume_personal_info', $profile, $user)) {
