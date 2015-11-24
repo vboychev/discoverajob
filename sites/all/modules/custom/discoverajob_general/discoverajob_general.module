@@ -56,7 +56,7 @@ function discoverajob_general_menu_local_tasks_alter(&$data, $router_item, $root
 function discoverajob_general_node_job_validate($form, &$form_state) {
   if ($form_state['values']['promote']) {
     $promoted_nodes = _discoverajob_general_promoted_nodes('job_per_template');
-    if ($promoted_nodes && $promoted_nodes > MAX_PROMOTED_NODES) {
+    if ($promoted_nodes && $promoted_nodes >= MAX_PROMOTED_NODES) {
       form_set_error('promoted', t('The maximum number of "Promoted on front page" is @count', array('@count' => MAX_PROMOTED_NODES)));
     }
   }
