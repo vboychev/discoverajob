@@ -310,3 +310,7 @@ header {
 .node-job.node--full ul.links a:hover, .node-job.node--full ul.links a:focus, .node-job.node--full ul.links a:active {
   border-color: #2e2e2c;
 }
+
+.sidebar-first-toggle {
+  top: 0.2em !important; 
+}
