@@ -1,5 +1,7 @@
 <?php
 
+define('MAX_PROMOTED_NODES', 5);
+
 /**
  * @file
  * General functionality
@@ -13,6 +15,11 @@ function discoverajob_general_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_pass') {
     $form['name']['#title'] = t('E-mail address');
     array_unshift($form['#validate'], 'discoverajob_general_user_pass_validation');
+  }
+
+  // Added validate on job node form.
+  if ($form_id == 'job_per_template_node_form') {
+    array_unshift($form['#validate'], 'discoverajob_general_node_job_validate');
   }
 }
 
@@ -41,4 +48,31 @@ function discoverajob_general_menu_local_tasks_alter(&$data, $router_item, $root
     // Hide 'Rejected' tab on applications page.
     unset($data['tabs'][0]['output'][2]);
   }
+}
+
+/**
+ * Validate job node form.
+ */
+function discoverajob_general_node_job_validate($form, &$form_state) {
+  if ($form_state['values']['promote']) {
+    $promoted_nodes = _discoverajob_general_promoted_nodes('job_per_template');
+    if ($promoted_nodes && $promoted_nodes > MAX_PROMOTED_NODES) {
+      form_set_error('promoted', t('The maximum number of "Promoted on front page" is @count', array('@count' => MAX_PROMOTED_NODES)));
+    }
+  }
+}
+
+/**
+ * Helper function which return number of promoted nodes.
+ */
+function _discoverajob_general_promoted_nodes($type) {
+  $promoted_nodes = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('promote', 1)
+    ->condition('type', $type)
+    ->countQuery()
+    ->execute()
+    ->fetchField();
+
+  return $promoted_nodes;
 }
