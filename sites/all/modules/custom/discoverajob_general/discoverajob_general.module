@@ -76,3 +76,22 @@ function _discoverajob_general_promoted_nodes($type) {
 
   return $promoted_nodes;
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function discoverajob_general_views_pre_render(&$view) {
+  if($view->name == "front_page_job_search") {
+    if ($view->result) {
+      foreach ($view->result as $key => $result) {
+        if (!empty($result->entity)) {
+          $node = node_load($result->entity);
+            // Show only promoted to front page nodes.
+            if (!$node->promote) {
+              unset($view->result[$key]);
+            }
+        }   
+      }
+    }
+  }
+}
