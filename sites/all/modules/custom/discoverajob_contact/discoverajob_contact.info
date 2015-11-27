@@ -1,13 +1,6 @@
-name = Contact
-description = Enables the use of both personal and site-wide contact forms.
-package = Core
-version = VERSION
+name = Contacts
+description = Create contact forms.
+package = Discoverajob
 core = 7.x
-files[] = contact.test
-configure = admin/structure/contact
 
-; Information added by Drupal.org packaging script on 2015-06-17
-version = "7.38"
-project = "drupal"
-datestamp = "1434567286"
 
