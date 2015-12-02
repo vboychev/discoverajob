@@ -83,23 +83,7 @@ function discoverajob_contact_form_submit($form, &$form_state) {
   $from = $values['mail'];
 
   // Send the e-mail to the recipients using the site default language.
-  drupal_mail('discoverajob_contact', 'send_contact_form_mail', $to, language_default(), array(), $from, TRUE);
-
-  $message['subject'] = t('New message received in discoverajob.bg');
-  $message['body'] = array();
-  $message['body'][] = t('You have recieved new message with the following information:') . '\n';
-  $message['body'][] = t('Name:') . $values['name'] . '\n';
-  $message['body'][] = t('E-mail:') . $values['mail'] . '\n';
-  $message['body'][] = t('Message') . $values['message'];
-
-  // Retrieve the responsible implementation for this message.
-  $system = drupal_mail_system('discoverajob_contact', 'send_contact_form_mail');
-
-  // Format the message body.
-  $message = $system->format($message);
-
-  // Send e-mail.
-  $message['result'] = $system->mail($message);
+  drupal_mail('discoverajob_contact', 'send_contact_form_mail', $to, language_default(), $values, $from, TRUE);
 
   // Jump to home page rather than back to contact page to avoid
   // contradictory messages if flood control has been activated.

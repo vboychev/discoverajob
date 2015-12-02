@@ -37,3 +37,20 @@ function discoverajob_contact_menu() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_mail().
+ */
+function discoverajob_contact_mail($key, array &$message, array $params) {
+  $language = $message['language'];
+  switch ($key) {
+    case 'send_contact_form_mail':
+      $message['subject'] = t('New message received in discoverajob.bg');
+      $message['body'] = array();
+      $message['body'][] = t('You have recieved new message with the following information:') . '\n';
+      $message['body'][] = t('Name:') . $params['name'] . '\n';
+      $message['body'][] = t('E-mail:') . $params['mail'] . '\n';
+      $message['body'][] = t('Message') . $params['message'];
+      break;
+  }
+}
