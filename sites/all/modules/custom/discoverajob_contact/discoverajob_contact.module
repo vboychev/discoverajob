@@ -6,18 +6,34 @@
  */
 
 /**
-
-/**
  * Implements hook_menu().
  */
 function discoverajob_contact_menu() {
+  $items['admin/config/discoverajob'] = array(
+    'title' => 'Discoverajob configurations',
+    'description' => 'Basic site configurations',
+    'position' => 'right',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer site configuration'),
+    'file' =>  '/system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+  $items['admin/config/discoverajob/contacts'] = array(
+    'title' => 'Contacts',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('discoverajob_config_contact_form'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'discoverajob_contact.admin.inc',
+    'file path' => drupal_get_path('module', 'discoverajob_contact'),
+  );
   $items['contacts'] = array(
-    'title' => 'Contact',
+    'title' => 'Contacts',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('discoverajob_contact_form'),
     'access arguments' => array('access content'),
-    'type' => MENU_SUGGESTED_ITEM,
+    'type' => MENU_CALLBACK,
     'file' => 'discoverajob_contact.pages.inc',
+    'file path' => drupal_get_path('module', 'discoverajob_contact'),
   );
   return $items;
 }

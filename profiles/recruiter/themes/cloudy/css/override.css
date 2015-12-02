@@ -72,26 +72,34 @@ ul.node__links li:first-child {
     margin-left: 0;
 }
 @media all and (min-width: 800px) {
-    .l-region--navigation-container {
-        border-bottom: 0;
-    }
-    .node-job.node-teaser .company-logo {
-        width: 15.41667%;
-        float: right;
-        margin-right: 0;
-        *margin-left: -1.5%;
-        display: inline;
-        clear: none;
-    }
-    .node-job.node-teaser .link-wrapper {
-        width: 100%;
-        margin-right: 0;
-        *margin-left: 0;
-        display: block;
-        clear: both;
-        float: left;
-        margin-left: 16.9167%;
-    }
+  .l-region--navigation-container {
+    border-bottom: 0;
+  }
+  .node-job.node-teaser .company-logo {
+    width: 15.41667%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5%;
+    display: inline;
+    clear: none;
+  }
+  .node-job.node-teaser .link-wrapper {
+    width: 100%;
+    margin-right: 0;
+    *margin-left: 0;
+    display: block;
+    clear: both;
+    float: left;
+    margin-left: 16.9167%;
+  }
+  .contact-form-right {
+    width: 74.625%;
+    float: left;
+  }
+  .contact-form-left {
+    width: 25.375%;
+    float: left;
+  }
 }
 
 #block-menu-menu-social-links {

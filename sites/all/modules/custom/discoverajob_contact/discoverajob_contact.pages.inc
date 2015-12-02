@@ -15,6 +15,21 @@
 function discoverajob_contact_form($form, &$form_state) {
   global $user;
 
+  $defaults = array(
+    'value' => '',
+    'format' => filter_default_format(),
+  );
+  $discoverajob_contact_form_contacts = variable_get('discoverajob_contact_form_contacts', $defaults);
+  $form['contacts'] = array(
+    '#markup' => '<div class="contact-form-left">' . $discoverajob_contact_form_contacts['value'] . '</div>',
+  );
+  $form['open_right_column'] = array(
+    '#markup' => '<div class="contact-form-right">',
+  );
+  $discoverajob_contact_form_help = variable_get('discoverajob_contact_form_help', $defaults);
+  $form['help_text'] = array(
+    '#markup' => $discoverajob_contact_form_help['value'],
+  );
   $form['name'] = array(
     '#type' => 'textfield',
     '#title' => t('Your name'),
@@ -38,7 +53,9 @@ function discoverajob_contact_form($form, &$form_state) {
     '#type' => 'submit',
     '#value' => t('Send message'),
   );
-
+  $form['close_right_column'] = array(
+    '#markup' => '</div>',
+  );
   return $form;
 }
 
@@ -62,14 +79,30 @@ function discoverajob_contact_site_form_submit($form, &$form_state) {
   $values = $form_state['values'];
 
   // Get the to and from e-mail addresses.
-  $to = ''; // TODO: get email form settings.
-  $from = $values['sender']->mail;
+  //$to = variable_get('discoverajob_contact_form_mail', 'office@discoverajob.bg');
+  $to = 'mih.shahov@gmail.com';
+  $from = $values['mail'];
 
   // Send the e-mail to the recipients using the site default language.
-  drupal_mail('');
+  drupal_mail('discoverajob_contact', 'send_contact_form_mail', $to, language_default(), array(), $from, TRUE);
+
+  $message['subject'] = t('New message received in discoverajob.bg');
+  $message['body'] = array();
+  $message['body'][] = t('You have recieved new message with the following information:') . '\n';
+  $message['body'][] = t('Name:') . $values['name'] . '\n';
+  $message['body'][] = t('E-mail:') . $values['mail'] . '\n';
+  $message['body'][] = t('Message') . $values['message'];
+
+  // Retrieve the responsible implementation for this message.
+  $system = drupal_mail_system('discoverajob_contact', 'send_contact_form_mail');
+
+  // Format the message body.
+  $message = $system->format($message);
+
+  // Send e-mail.
+  $message['result'] = $system->mail($message);
 
   // Jump to home page rather than back to contact page to avoid
   // contradictory messages if flood control has been activated.
   drupal_set_message(t('Your message has been sent.'));
-  $form_state['redirect'] = '';
 }

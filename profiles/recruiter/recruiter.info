@@ -26,6 +26,9 @@ dependencies[] = recruiter_resume_search
 dependencies[] = recruiter_resume_search_notifications
 dependencies[] = recruiter_register
 
+; Custom
+dependencies[] = discoverajob_contact
+
 ; Information added by Drupal.org packaging script on 2015-03-25
 version = "7.x-1.6"
 core = "7.x"
