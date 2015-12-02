@@ -64,7 +64,7 @@ function discoverajob_contact_form($form, &$form_state) {
  *
  * @see discoverajob_contact_site_form_submit()
  */
-function discoverajob_contact_site_form_validate($form, &$form_state) {
+function discoverajob_contact_form_validate($form, &$form_state) {
   if (!valid_email_address($form_state['values']['mail'])) {
     form_set_error('mail', t('You must enter a valid e-mail address.'));
   }
@@ -75,12 +75,11 @@ function discoverajob_contact_site_form_validate($form, &$form_state) {
  *
  * @see discoverajob_contact_site_form_validate()
  */
-function discoverajob_contact_site_form_submit($form, &$form_state) {
+function discoverajob_contact_form_submit($form, &$form_state) {
   $values = $form_state['values'];
 
   // Get the to and from e-mail addresses.
-  //$to = variable_get('discoverajob_contact_form_mail', 'office@discoverajob.bg');
-  $to = 'mih.shahov@gmail.com';
+  $to = variable_get('discoverajob_contact_form_mail', 'office@discoverajob.bg');
   $from = $values['mail'];
 
   // Send the e-mail to the recipients using the site default language.
