@@ -95,3 +95,78 @@ function discoverajob_general_views_pre_render(&$view) {
     }
   }
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function discoverajob_general_block_info() {
+  $blocks = array();
+  $blocks['fill_cv'] = array(
+    'info' => t('Fill CV button'),
+  );
+  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function discoverajob_general_block_view($delta='') {
+  $block = array();
+  
+  switch($delta) {
+    case 'fill_cv' :
+      $block['content'] = discoverajob_general_fill_cv_content();
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Custom function to assemble renderable array for block content.
+ * Returns a renderable array with the block content.
+ * @return
+ *   returns a renderable array of block content.
+ */
+function discoverajob_general_fill_cv_content() {
+  global $user;
+  $block = array();
+  $path = '<front>';
+  
+  $image_path = base_path() . drupal_get_path('theme', 'cloudy') . "/images/button_cv.png";
+
+  $image = theme_image(array(
+    'path' => ($image_path),
+    'alt' => t('Fill CV'),
+    'title' => t('Fill CV'),
+  ));
+  $options = array(
+    'html' => TRUE,
+    'attributes' => array(
+        'title' => t('Fill CV'),
+        'class' => array('fill-cv'),
+    )
+  );
+  if (user_is_anonymous()) {
+    $path = 'user/register';
+  }
+  if (in_array('applicant', $user->roles)) {
+    $path = 'profile-resume';
+  }
+  if (in_array('recruiter', $user->roles)) {
+    return;
+  }
+
+  $button = l($image, $path, $options);
+
+  // Block output in HTML.
+  $block = array(
+    'button' => array(
+      '#type' => 'markup',
+      '#markup' => $button,
+    ),
+  );
+
+  return $block;
+}
