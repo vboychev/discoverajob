@@ -327,18 +327,17 @@ a.fill-cv img:hover {
   background: url('../images/button_cv_mouseover.png');
 }
 
+.block--discoverajob-general-fill-cv {
+  margin-top: -3px;
+}
+
 a.fill-cv {
   display: block;
   margin: 0 auto;
   width: 180px;
-  padding-right: 190px;
 }
 
 .page-search-job a.fill-cv {
   width: 70px;
   padding-right: 0px;
-}
-
-#block-views-exp-job-search-search-page {
-  padding-bottom: 2px;
 }
