@@ -341,3 +341,11 @@ a.fill-cv {
   width: 70px;
   padding-right: 0px;
 }
+
+.node-job .field .field__label, .node-job .field .term-level-field-label {
+  margin-bottom: 0;
+}
+
+.node-job .field {
+  margin-bottom: 0.3em;
+}
