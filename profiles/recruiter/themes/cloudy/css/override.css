@@ -349,3 +349,24 @@ a.fill-cv {
 .node-job .field {
   margin-bottom: 0.3em;
 }
+
+.block.block--locale.block--locale-language {
+  float: right;
+}
+
+.language-switcher-locale-url {
+  margin: 0 0 0 15px;
+}
+
+.language-switcher-locale-url li {
+  float: left;
+  list-style: none;
+  margin: 0;
+}
+
+.language-link {
+  color: #fff !important;
+  display: block;
+  padding: 0.4em;
+  text-decoration: none !important;
+}
