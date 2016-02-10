@@ -51,7 +51,7 @@ class FacetapiWidgetLinks extends FacetapiWidget {
   /**
    * Recursive function that sets each item's theme hook.
    *
-   * The indivual items will be rendered by different theme hooks depending on
+   * The individual items will be rendered by different theme hooks depending on
    * whether or not they are active.
    *
    * @param array &$build
@@ -86,6 +86,8 @@ class FacetapiWidgetLinks extends FacetapiWidget {
    *   The "items" parameter for theme_item_list().
    */
   function buildListItems($build) {
+    global $language ;
+    $lang_name = $language->language;
     $settings = $this->settings->settings;
 
     // Initializes links attributes, adds rel="nofollow" if configured.
@@ -95,8 +97,28 @@ class FacetapiWidgetLinks extends FacetapiWidget {
     // Builds rows.
     $items = array();
     foreach ($build as $value => $item) {
+      $facets = array("field_resume_job_preferences:field_resume_jobpref_field", "field_resume_xp:field_resume_xp_occupation_field", "field_resume_skills_it:field_resume_skills_it_level:term:parents_all", 'field_resume_skills_general:field_resume_skills_general_lev:term:parents_all', 'field_resume_education:field_resume_of_study:parents_all', 'field_job_employment_type_term:parents_all', 'field_job_region:parents_all', 'field_job_organization', 'field_job_occupational_field', 'field_job_occupational_field:parents_all', 'field_job_languages:parents_all', 'field_resume_xp:field_resume_xp_organization');
+      if ($lang_name != 'bg' && !empty($this->build['#facet']['field']) && in_array($this->build['#facet']['field'], $facets)) {
+        if (is_int($item['#indexed_value'])) {
+          $query = db_select('taxonomy_term_data', 'td');
+          $query->leftjoin('taxonomy_term_data', 'td2', 'td2.i18n_tsid = td.i18n_tsid');
+          $result = $query->fields('td', array('name'))
+          ->condition('td2.tid', $item['#indexed_value'], '=')
+          ->condition('td2.language', 'bg', '=')
+          ->condition('td.language', $lang_name, '=')
+          ->execute();
+          $translated_term = $result->fetchField();
+          if ($translated_term) {
+            $item['#markup'] = $translated_term;
+          }
+        }
+      }
       $row = array('class' => array());
 
+      // Allow adding classes via altering.
+      if (isset($item['#class'])) {
+        $attributes['class'] = array_merge($attributes['class'], $item['#class']);
+      }
       // Initializes variables passed to theme hook.
       $variables = array(
         'text' => $item['#markup'],
@@ -148,7 +170,7 @@ class FacetapiWidgetLinks extends FacetapiWidget {
   /**
    * Gets the base class array for a facet item.
    *
-   * Classes that extend FacetapiWidgetLinks will often overide this method to
+   * Classes that extend FacetapiWidgetLinks will often override this method to
    * alter the link displays via CSS without having to touch the render array.
    *
    * @return array
